@@ -1,0 +1,9 @@
+# keys and local state never go in git
+.env
+.env.*
+!.env.example
+*.part
+__pycache__/
+*.pyc
+.DS_Store
+.pytest_cache/

@@ -1,0 +1,21 @@
+{
+  "name": "Your Name",
+  "handle": "yourhandle",
+  "colors": {
+    "bg": "#F4F1EC",
+    "ink": "#0C0C0F",
+    "accent": "#1B8A68",
+    "accent2": "#E2F5EA",
+    "highlight": "#FAE67A",
+    "alert": "#C8323F"
+  },
+  "fonts": {
+    "display": "Inter Tight",
+    "body": "Inter",
+    "hand": "Caveat"
+  },
+  "cta": null,
+  "logo": null,
+  "projectsDir": "~/ReelRoom",
+  "clipsDir": "~/Downloads"
+}

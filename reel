@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Reel Room command line. Run `./reel help`.
+set -euo pipefail
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+RR_HOME="${REEL_ROOM_HOME:-$HOME/.reel-room}"
+PY="$RR_HOME/venv/bin/python"
+[ -x "$PY" ] || PY="$(command -v python3 || command -v python)"
+exec "$PY" "$HERE/skills/reel/tools/reel_cli.py" "$@"

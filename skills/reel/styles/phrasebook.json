@@ -1,0 +1,672 @@
+{
+ "version": 1,
+ "about": "Say this to get that. Plain phrases a creator can tap in the Room (Say this tab, Dailies quick asks). Each one becomes a frame-pinned note with the phrase as text. Claude maps the phrase id to the engine action in references/phrasebook.md. `component` = component-kit id (loop file <component>.mp4 in the kit loops folder, ids in kit_ids); `loop` = where a preview loop for a non-kit effect comes from; `preview` stays empty until Claude uploads the loop and writes phrasebook/catalog. `{word}` is filled with the word spoken at the pinned frame. Hero ids (hero_ids) are library heroes: their loops are <hero_loops_dir>/<component>.mp4.",
+ "loops_dir": "",
+ "groups": [
+  {
+   "id": "calmer",
+   "name": "Calmer",
+   "hint": "Too much going on? Take it down."
+  },
+  {
+   "id": "energy",
+   "name": "More energy",
+   "hint": "Feels flat? Give it a hit."
+  },
+  {
+   "id": "effects",
+   "name": "Specific effects",
+   "hint": "One effect, on one moment."
+  },
+  {
+   "id": "pacing",
+   "name": "Pacing",
+   "hint": "Tighter, or room to breathe."
+  }
+ ],
+ "items": [
+  {
+   "id": "simpler-here",
+   "group": "calmer",
+   "say": "Make this part simpler",
+   "does": "Drops this beat one motion level (Showreel to Polished to Simple).",
+   "action": {
+    "type": "level",
+    "to": "down",
+    "scope": "beat"
+   },
+   "component": null,
+   "loop": null
+  },
+  {
+   "id": "no-graphics-here",
+   "group": "calmer",
+   "say": "Remove the graphics here",
+   "does": "Takes the card or graphic off this beat. Just you and the captions.",
+   "action": {
+    "type": "edit",
+    "op": "remove_insert",
+    "scope": "beat"
+   },
+   "component": null,
+   "loop": null
+  },
+  {
+   "id": "just-captions",
+   "group": "calmer",
+   "say": "Just captions on this part",
+   "does": "Speaker full frame with plain captions. No cards, no camera moves.",
+   "action": {
+    "type": "edit",
+    "op": "presenter_plain",
+    "scope": "beat"
+   },
+   "component": null,
+   "loop": null
+  },
+  {
+   "id": "fewer-zooms",
+   "group": "calmer",
+   "say": "Fewer zooms",
+   "does": "Holds the camera still on this beat. No punches or push-ins.",
+   "action": {
+    "type": "motion",
+    "seg": {
+     "camera": "still"
+    },
+    "scope": "beat"
+   },
+   "component": null,
+   "loop": null
+  },
+  {
+   "id": "no-sfx",
+   "group": "calmer",
+   "say": "No sound effects",
+   "does": "Voice only. Every whoosh and pop is removed from the reel.",
+   "action": {
+    "type": "project",
+    "set": {
+     "motion.sfx": "off"
+    },
+    "scope": "reel"
+   },
+   "component": null,
+   "loop": null
+  },
+  {
+   "id": "no-transition",
+   "group": "calmer",
+   "say": "Plain cut here, no transition",
+   "does": "The cut into this beat becomes a clean cut.",
+   "action": {
+    "type": "motion",
+    "seg": {
+     "transition": "none"
+    },
+    "scope": "beat"
+   },
+   "component": null,
+   "loop": null
+  },
+  {
+   "id": "whip-here",
+   "group": "energy",
+   "say": "Add a whip here",
+   "does": "A fast whip pan with motion blur into this beat.",
+   "action": {
+    "type": "motion",
+    "seg": {
+     "transition": "whip"
+    },
+    "scope": "beat"
+   },
+   "component": null,
+   "loop": "engine motion clip (whip)"
+  },
+  {
+   "id": "hook-harder",
+   "group": "energy",
+   "say": "Make the hook hit harder",
+   "does": "Opening beat goes Showreel: kinetic hook type, a punch on the payoff word, a sound on the hit.",
+   "action": {
+    "type": "level",
+    "to": "showreel",
+    "scope": "hook"
+   },
+   "component": null,
+   "loop": "engine motion clip (showreel hook)"
+  },
+  {
+   "id": "punch-line",
+   "group": "energy",
+   "say": "Punch in on \"{word}\"",
+   "does": "A quick zoom hit exactly on that word, then back.",
+   "action": {
+    "type": "motion",
+    "seg": {
+     "camera": "punch",
+     "punch": "@{word}"
+    },
+    "scope": "beat"
+   },
+   "component": null,
+   "needs_word": true,
+   "loop": "engine motion clip (punch)"
+  },
+  {
+   "id": "show-off-here",
+   "group": "energy",
+   "say": "Show off on this part",
+   "does": "This beat goes Showreel: its own move on the cut, camera always moving, graphics land with weight.",
+   "action": {
+    "type": "level",
+    "to": "showreel",
+    "scope": "beat"
+   },
+   "component": null,
+   "loop": null
+  },
+  {
+   "id": "more-sfx",
+   "group": "energy",
+   "say": "More sound effects",
+   "does": "A sound on every transition and graphic, still under your voice.",
+   "action": {
+    "type": "project",
+    "set": {
+     "motion.sfx": "full"
+    },
+    "scope": "reel"
+   },
+   "component": null,
+   "loop": null
+  },
+  {
+   "id": "word-behind",
+   "group": "effects",
+   "say": "Big word behind my head on \"{word}\"",
+   "does": "A giant word sits behind you, your head in front of it.",
+   "action": {
+    "type": "behind",
+    "scope": "beat"
+   },
+   "component": null,
+   "needs_word": true,
+   "loop": "engine motion clip (behind my head)"
+  },
+  {
+   "id": "type-prompt",
+   "group": "effects",
+   "say": "Type it like a prompt",
+   "does": "The line types out in a chat or prompt bar, letter by letter.",
+   "action": {
+    "type": "kit",
+    "component": "typer",
+    "scope": "beat"
+   },
+   "component": "typer",
+   "loop": null
+  },
+  {
+   "id": "tick-off",
+   "group": "effects",
+   "say": "Tick them off as I say them",
+   "does": "A checklist where each item ticks on the word you say it.",
+   "action": {
+    "type": "kit",
+    "component": "checklist-tick",
+    "scope": "beat"
+   },
+   "component": "checklist-tick",
+   "loop": null
+  },
+  {
+   "id": "count-up",
+   "group": "effects",
+   "say": "Count it up",
+   "does": "The number rolls up like an odometer and lands on your word.",
+   "action": {
+    "type": "kit",
+    "component": "odometer",
+    "scope": "beat"
+   },
+   "component": "odometer",
+   "loop": null
+  },
+  {
+   "id": "arrow-at",
+   "group": "effects",
+   "say": "Draw an arrow at it",
+   "does": "A hand-drawn arrow draws on and points at the thing you mean.",
+   "action": {
+    "type": "kit",
+    "component": "annotation-arrow",
+    "scope": "beat"
+   },
+   "component": "annotation-arrow",
+   "loop": null
+  },
+  {
+   "id": "show-chart",
+   "group": "effects",
+   "say": "Show a chart here",
+   "does": "A simple bar or line chart builds as you talk through the numbers.",
+   "action": {
+    "type": "insert",
+    "insert": "table",
+    "alt": "motion-editorial cycle_chart / gauge",
+    "scope": "beat"
+   },
+   "component": null,
+   "loop": "motion-editorial cycle_chart or table insert"
+  },
+  {
+   "id": "show-study",
+   "group": "effects",
+   "say": "Show the chart from the study",
+   "does": "The study's chart builds on your words, the key number stamps in and the source stays on screen.",
+   "action": {
+    "type": "kit",
+    "component": "evidence-chart",
+    "scope": "beat"
+   },
+   "component": "evidence-chart",
+   "loop": null
+  },
+  {
+   "id": "moodier",
+   "group": "effects",
+   "say": "Grade it moodier here",
+   "does": "Darker, more contrast on this part only. Skin stays natural.",
+   "action": {
+    "type": "grade",
+    "look": "dark",
+    "scope": "beat"
+   },
+   "component": null,
+   "loop": null
+  },
+  {
+   "id": "into-phone",
+   "group": "effects",
+   "say": "Shrink me into a phone",
+   "does": "You shrink into a phone screen and the app shows around you.",
+   "action": {
+    "type": "kit",
+    "component": "phone-frame",
+    "scope": "beat"
+   },
+   "component": "phone-frame",
+   "loop": null
+  },
+  {
+   "id": "behind-head-auto",
+   "group": "effects",
+   "say": "Put the key word behind me",
+   "does": "Claude picks the strongest word in this line and puts it behind your head.",
+   "action": {
+    "type": "behind",
+    "scope": "beat",
+    "pick": "auto"
+   },
+   "component": null,
+   "loop": "engine motion clip (behind my head)"
+  },
+  {
+   "id": "strike-it",
+   "group": "effects",
+   "say": "Strike \"{word}\" out",
+   "does": "The word pops in as a label, gets crossed out and tumbles away.",
+   "action": {
+    "type": "kit",
+    "component": "label-pill",
+    "scope": "beat"
+   },
+   "component": "label-pill",
+   "needs_word": true,
+   "loop": null
+  },
+  {
+   "id": "add-up-price",
+   "group": "effects",
+   "say": "Show the cost adding up",
+   "does": "A receipt stacks up line by line and lands on the total.",
+   "action": {
+    "type": "kit",
+    "component": "receipt",
+    "scope": "beat"
+   },
+   "component": "receipt",
+   "loop": null
+  },
+  {
+   "id": "before-after",
+   "group": "effects",
+   "say": "Show a before and after",
+   "does": "A wipe slides from the before to the after.",
+   "action": {
+    "type": "kit",
+    "component": "before-after",
+    "scope": "beat"
+   },
+   "component": "before-after",
+   "loop": null
+  },
+  {
+   "id": "spotlight",
+   "group": "effects",
+   "say": "Spotlight this part",
+   "does": "Everything dims except the one thing you are talking about.",
+   "action": {
+    "type": "kit",
+    "component": "spotlight",
+    "scope": "beat"
+   },
+   "component": "spotlight",
+   "loop": null
+  },
+  {
+   "id": "show-steps",
+   "group": "effects",
+   "say": "Show the steps as I go",
+   "does": "A step counter moves to the step you are on.",
+   "action": {
+    "type": "kit",
+    "component": "stepper",
+    "scope": "beat"
+   },
+   "component": "stepper",
+   "loop": null
+  },
+  {
+   "id": "progress",
+   "group": "effects",
+   "say": "Fill a progress bar",
+   "does": "A bar fills up as you get closer to the point.",
+   "action": {
+    "type": "kit",
+    "component": "progress-bar",
+    "scope": "beat"
+   },
+   "component": "progress-bar",
+   "loop": null
+  },
+  {
+   "id": "comment-dm",
+   "group": "effects",
+   "say": "End on the comment-for-DM",
+   "does": "A comment with your keyword appears and turns into a DM.",
+   "action": {
+    "type": "kit",
+    "component": "comment-cta",
+    "scope": "beat"
+   },
+   "component": "comment-cta",
+   "loop": null
+  },
+  {
+   "id": "circle-it",
+   "group": "effects",
+   "say": "Circle it",
+   "does": "A hand-drawn circle draws around the thing you mean.",
+   "action": {
+    "type": "kit",
+    "component": "annotation-arrow",
+    "args": {
+     "kind": "circle"
+    },
+    "scope": "beat"
+   },
+   "component": "annotation-arrow",
+   "loop": null
+  },
+  {
+   "id": "title-stamp-it",
+   "group": "effects",
+   "say": "Stamp it as a big headline",
+   "does": "Your line becomes a huge serif headline stamped in on the word, with a colour change behind it.",
+   "action": {
+    "type": "kit",
+    "component": "title-stamp",
+    "scope": "beat"
+   },
+   "component": "title-stamp",
+   "loop": null
+  },
+  {
+   "id": "roll-number",
+   "group": "effects",
+   "say": "Roll the number up and step it",
+   "does": "The number rolls up, slams on your word, then steps to the next number you say.",
+   "action": {
+    "type": "kit",
+    "component": "money-counter",
+    "scope": "beat"
+   },
+   "component": "money-counter",
+   "loop": null
+  },
+  {
+   "id": "draw-the-drop",
+   "group": "effects",
+   "say": "Draw the drop on a chart",
+   "does": "A line draws on your words: it holds then plunges, or dips and recovers, with a stopwatch and a stamp.",
+   "action": {
+    "type": "kit",
+    "component": "cycle-chart",
+    "scope": "beat"
+   },
+   "component": "cycle-chart",
+   "loop": null
+  },
+  {
+   "id": "study-number-big",
+   "group": "effects",
+   "say": "Slam the study number in big",
+   "does": "The study's key number slams in, its chart builds and the source card lands. Needs the study.",
+   "action": {
+    "type": "kit",
+    "component": "evidence-hero",
+    "scope": "beat"
+   },
+   "component": "evidence-hero",
+   "loop": null
+  },
+  {
+   "id": "editing-timeline",
+   "group": "effects",
+   "say": "Show the editing timeline of this video",
+   "does": "A real editing timeline of this video builds on your words, a playhead races across, then it folds away.",
+   "action": {
+    "type": "kit",
+    "component": "nle-timeline",
+    "scope": "beat"
+   },
+   "component": "nle-timeline",
+   "loop": null
+  },
+  {
+   "id": "fire-timeline",
+   "group": "effects",
+   "say": "Set the timeline on fire",
+   "does": "An editing timeline chars, catches fire on your word and drops away.",
+   "action": {
+    "type": "kit",
+    "component": "fire-timeline",
+    "scope": "beat"
+   },
+   "component": "fire-timeline",
+   "loop": null
+  },
+  {
+   "id": "stamp-word",
+   "group": "effects",
+   "say": "Stamp \"{word}\" huge",
+   "does": "One giant word stamps in letter by letter, behind your head when there is a cut-out.",
+   "action": {
+    "type": "kit",
+    "component": "word-stamp",
+    "scope": "beat"
+   },
+   "component": "word-stamp",
+   "loop": null,
+   "needs_word": true
+  },
+  {
+   "id": "palette-fan",
+   "group": "effects",
+   "say": "Fan out the styles like a paint deck",
+   "does": "Swatches fan out, each a little live preview, and the one you pick lifts out on your word.",
+   "action": {
+    "type": "kit",
+    "component": "palette-fan",
+    "scope": "beat"
+   },
+   "component": "palette-fan",
+   "loop": null
+  },
+  {
+   "id": "video-chapters",
+   "group": "effects",
+   "say": "Show it as a video with chapters",
+   "does": "A video player card unfolds, plays on your word and skips through the chapters.",
+   "action": {
+    "type": "kit",
+    "component": "video-card",
+    "scope": "beat"
+   },
+   "component": "video-card",
+   "loop": null
+  },
+  {
+   "id": "grid-of-me",
+   "group": "effects",
+   "say": "Shrink me into a grid",
+   "does": "You shrink into the middle of a 3x3 grid of your own clips, then they fall away and you snap back.",
+   "action": {
+    "type": "kit",
+    "component": "grid-collapse",
+    "scope": "beat"
+   },
+   "component": "grid-collapse",
+   "loop": null
+  },
+  {
+   "id": "magazine-cover",
+   "group": "effects",
+   "say": "Make it a magazine cover",
+   "does": "The frame turns into a magazine cover: a masthead, coverlines beside you, a sticker.",
+   "action": {
+    "type": "kit",
+    "component": "magazine-cover",
+    "scope": "beat"
+   },
+   "component": "magazine-cover",
+   "loop": null
+  },
+  {
+   "id": "orbit-my-reels",
+   "group": "effects",
+   "say": "Orbit my reels around me",
+   "does": "Your own reels spin around you, some passing in front, some behind your head.",
+   "action": {
+    "type": "kit",
+    "component": "reel-orbit",
+    "scope": "beat"
+   },
+   "component": "reel-orbit",
+   "loop": null
+  },
+  {
+   "id": "tighter",
+   "group": "pacing",
+   "say": "Tighter",
+   "does": "Trims the small pauses in this beat. Words stay the same.",
+   "action": {
+    "type": "pacing",
+    "op": "tighten",
+    "scope": "beat"
+   },
+   "component": null,
+   "loop": null
+  },
+  {
+   "id": "breathe",
+   "group": "pacing",
+   "say": "Let this breathe",
+   "does": "Keeps a beat of silence after this line so it lands.",
+   "action": {
+    "type": "pacing",
+    "op": "breathe",
+    "scope": "beat"
+   },
+   "component": null,
+   "loop": null
+  },
+  {
+   "id": "cut-pause",
+   "group": "pacing",
+   "say": "Cut the pause before \"{word}\"",
+   "does": "Removes the gap right before that word.",
+   "action": {
+    "type": "pacing",
+    "op": "cut_pause_before",
+    "scope": "beat"
+   },
+   "component": null,
+   "needs_word": true,
+   "loop": null
+  },
+  {
+   "id": "hold-face",
+   "group": "pacing",
+   "say": "Stay on my face longer here",
+   "does": "The graphic comes in later so the face holds a moment first.",
+   "action": {
+    "type": "edit",
+    "op": "delay_insert",
+    "scope": "beat"
+   },
+   "component": null,
+   "loop": null
+  }
+ ],
+ "examples": [
+  "Make the number bigger and slam it in on \"7\"",
+  "Less going on in the middle part, it feels busy",
+  "Same as round 2 here, I liked that better",
+  "Whip into the list, then keep it calm"
+ ],
+ "kit_ids": [
+  "typer",
+  "checklist-tick",
+  "progress-bar",
+  "odometer",
+  "label-pill",
+  "receipt",
+  "comment-cta",
+  "stepper",
+  "annotation-arrow",
+  "phone-frame",
+  "before-after",
+  "spotlight",
+  "head-bubble",
+  "evidence-chart"
+ ],
+ "hero_ids": [
+  "title-stamp",
+  "money-counter",
+  "cycle-chart",
+  "evidence-hero",
+  "nle-timeline",
+  "fire-timeline",
+  "word-stamp",
+  "palette-fan",
+  "video-card",
+  "grid-collapse",
+  "magazine-cover",
+  "reel-orbit"
+ ],
+ "hero_loops_dir": ""
+}

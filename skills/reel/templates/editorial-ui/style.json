@@ -1,0 +1,139 @@
+{
+ "id": "editorial-ui",
+ "tokens": {
+  "set": null,
+  "set_glow": null,
+  "set_edge": null,
+  "cream": null,
+  "gold": null,
+  "ink": null,
+  "flag": "#C8485C"
+ },
+ "fonts": {
+  "serif": "Playfair Display",
+  "ui": "DM Sans",
+  "mono": "JetBrains Mono"
+ },
+ "set": {
+  "zoom": 1.12,
+  "grain": 3.2,
+  "vignette": 0.42,
+  "glow": 0.55,
+  "shadow": {
+   "opacity": 0.42,
+   "blur": 34,
+   "dy": 26
+  },
+  "edge": {
+   "erode_px": 1.0,
+   "feather_px": 0.8,
+   "wrap": 0.22,
+   "temporal": true
+  },
+  "default": "brand"
+ },
+ "headline": {
+  "max_w": 1000,
+  "line_height": 0.86,
+  "max_px": 330,
+  "min_px": 120,
+  "overlap": 0.95,
+  "rise_s": 0.42,
+  "settle_em": 0.06
+ },
+ "subtitle": {
+  "font": "ui",
+  "px": 42,
+  "max_words": 4,
+  "max_chars": 24,
+  "min_top": 1290,
+  "max_top": 1402,
+  "dim": 0.58
+ },
+ "band": {
+  "top": 244,
+  "gap": 18
+ },
+ "sfx": {
+  "enabled": true,
+  "gain_db": -20,
+  "voice_lufs": -14,
+  "tp": -1.5
+ },
+ "prompt": {
+  "label": "",
+  "cps": 26
+ },
+ "palette": {
+  "brand": {
+   "plate": null,
+   "type": null,
+   "accent": null,
+   "note": "brand set colour (colors.set / accent), cream type, gold italics"
+  },
+  "ink": {
+   "plate": "#16100F",
+   "type": "#F6F2EE",
+   "accent": "#D9B45A"
+  },
+  "bone": {
+   "plate": "#EDE5DA",
+   "type": "#5C1522",
+   "accent": "#7A1E2E"
+  },
+  "ember": {
+   "plate": "#B4511F",
+   "type": "#1D1214",
+   "accent": "#F6F2EE"
+  },
+  "slate": {
+   "plate": "#28323B",
+   "type": "#F6F2EE",
+   "accent": "#D9B45A"
+  },
+  "gold": {
+   "plate": "#C99A3E",
+   "type": "#1D1214",
+   "accent": "#5C1522"
+  }
+ },
+ "countdown": {
+  "days": 84
+ },
+ "takeover": {
+  "auto": true,
+  "page": "bone",
+  "content_top": 330,
+  "ghost": true,
+  "rack": true,
+  "reveal": {
+   "from": "head",
+   "delay": 0.22,
+   "dur": 0.6
+  },
+  "subject": {
+   "scale": 0.9,
+   "x": -150,
+   "slide_s": 0.62,
+   "push": 0.025
+  },
+  "words": {
+   "max_px": 270,
+   "italic_px": 200,
+   "min_px": 110,
+   "max_w": 960,
+   "overlap": 0.55,
+   "cx": 540
+  },
+  "tracker": {
+   "title": "",
+   "items": [],
+   "count": 0,
+   "x": 724,
+   "top": 950,
+   "w": 236
+  },
+  "camera_kmax": 1.03
+ },
+ "tracker": {}
+}

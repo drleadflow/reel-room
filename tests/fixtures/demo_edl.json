@@ -1,0 +1,93 @@
+[
+ {
+  "id": "hook",
+  "clip": "c1",
+  "in": 0.87,
+  "out": 5.55,
+  "lock_in": true,
+  "lock_out": true,
+  "mode": "split",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.43,
+  "line": "If you want better sleep starting tonight, here are the 3 things I would do."
+ },
+ {
+  "id": "n1",
+  "clip": "c1",
+  "in": 8.61,
+  "out": 14.94,
+  "lock_in": true,
+  "lock_out": true,
+  "mode": "split",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.43,
+  "line": "Number 1, I would stop caffeine after 2 PM. Caffeine has a half life of about 5 hours."
+ },
+ {
+  "id": "n2",
+  "clip": "c1",
+  "in": 20.75,
+  "out": 27.15,
+  "lock_in": true,
+  "lock_out": true,
+  "mode": "full",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.43,
+  "line": "Number 2, keep your bedroom cool. Around 65 degrees is the sweet spot for most people."
+ },
+ {
+  "id": "n3",
+  "clip": "c1",
+  "in": 27.77,
+  "out": 32.94,
+  "lock_in": true,
+  "lock_out": true,
+  "mode": "split",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.43,
+  "line": "And third, get 10 minutes of morning light. It sets your body clock for the whole day."
+ },
+ {
+  "id": "cooked",
+  "clip": "c1",
+  "in": 33.46,
+  "out": 36.95,
+  "lock_in": true,
+  "lock_out": true,
+  "mode": "split",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.43,
+  "line": "And if you scroll in bed until 1 AM, you are cooked."
+ },
+ {
+  "id": "money",
+  "clip": "c1",
+  "in": 37.47,
+  "out": 42.46,
+  "lock_in": true,
+  "lock_out": true,
+  "mode": "split",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.43,
+  "line": "Sleep is a 60 billion dollar industry, but the best fixes are free."
+ },
+ {
+  "id": "cta",
+  "clip": "c1",
+  "in": 42.98,
+  "out": 44.95,
+  "lock_in": true,
+  "lock_out": true,
+  "mode": "full",
+  "zoom": 1.0,
+  "cx": 0.5,
+  "cy": 0.43,
+  "line": "Save this and try it tonight."
+ }
+]

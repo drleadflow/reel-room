@@ -1,0 +1,35 @@
+{
+ "edition": "full",
+ "label": "Reel Room",
+ "version": "0.2.0",
+ "built_from": "e1a81aa+uncommitted",
+ "built": "2026-10-14",
+ "styles": [
+  "editorial-ui",
+  "clean-talk",
+  "motion-editorial",
+  "split-deck",
+  "list-stack",
+  "floating-cards",
+  "carousel-slideup",
+  "desk-demo"
+ ],
+ "compile_styles": [
+  "split-deck",
+  "motion-editorial",
+  "editorial-ui"
+ ],
+ "keys": {
+  "OPENROUTER_API_KEY": "recommended",
+  "GEMINI_API_KEY": "optional",
+  "ZERNIO_API_KEY": "optional"
+ },
+ "imports": [
+  "faster_whisper",
+  "numpy",
+  "PIL",
+  "cv2",
+  "onnxruntime",
+  "yt_dlp"
+ ]
+}

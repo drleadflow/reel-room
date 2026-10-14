@@ -1,0 +1,114 @@
+{
+ "title": "SLEEP BETTER TONIGHT",
+ "hook_id": "hook",
+ "sections": [
+  {
+   "name": "hook",
+   "style": "split-deck",
+   "purpose": "hook",
+   "line_ids": [
+    "hook"
+   ]
+  },
+  {
+   "name": "three fixes",
+   "style": "split-deck",
+   "purpose": "explain",
+   "line_ids": [
+    "n1",
+    "n2",
+    "n3"
+   ]
+  },
+  {
+   "name": "payoff",
+   "style": "split-deck",
+   "purpose": "proof",
+   "line_ids": [
+    "cooked",
+    "money"
+   ]
+  },
+  {
+   "name": "cta",
+   "style": "split-deck",
+   "purpose": "cta",
+   "line_ids": [
+    "cta"
+   ]
+  }
+ ],
+ "hero_moments": [
+  {
+   "line_id": "cooked",
+   "anchor_word": "cooked",
+   "library": "fire-timeline",
+   "idea": "The night's timeline catches fire on 'cooked': late scrolling burns through the hours of sleep.",
+   "args": {
+    "title": "scroll in bed",
+    "at": "@scroll",
+    "ignite": "@bed",
+    "burn": "@cooked",
+    "tone": "dark"
+   }
+  },
+  {
+   "line_id": "money",
+   "anchor_word": "billion",
+   "library": "money-counter",
+   "idea": "A counter rolls up to 60 billion dollars as it is said, then 'free' lands as the payoff.",
+   "args": {
+    "steps": [
+     [
+      "60",
+      "@60"
+     ]
+    ],
+    "prefix": "$",
+    "unit": "billion",
+    "kicker": "sleep industry",
+    "label": "the best fixes are free",
+    "label_at": "@free",
+    "at": "@sleep",
+    "tone": "dark"
+   }
+  }
+ ],
+ "beats": [
+  {
+   "id": "hook",
+   "component": "none",
+   "on_screen_text": "",
+   "anchor_word": "",
+   "why": "the title card carries it"
+  },
+  {
+   "id": "n1",
+   "component": "odometer",
+   "on_screen_text": "5 hours",
+   "anchor_word": "hours",
+   "why": "the half life is the number to remember"
+  },
+  {
+   "id": "n2",
+   "component": "label-pill",
+   "on_screen_text": "65 degrees",
+   "anchor_word": "degrees",
+   "why": "one number, one pill"
+  },
+  {
+   "id": "n3",
+   "component": "typer",
+   "on_screen_text": "10 minutes of morning light",
+   "anchor_word": "light",
+   "why": "the action, typed out"
+  },
+  {
+   "id": "cta",
+   "component": "none",
+   "on_screen_text": "",
+   "anchor_word": "",
+   "why": "presenter only for the ask"
+  }
+ ]
+}

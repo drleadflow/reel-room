@@ -1,0 +1,78 @@
+{
+ "version": 2,
+ "styles": [
+  {
+   "id": "editorial-ui",
+   "name": "Editorial UI",
+   "family": "cutout",
+   "needs_cutout": true,
+   "template": "templates/editorial-ui",
+   "desc": "You, cut out onto a solid colour set that changes on every beat, with huge serif words behind your head. Cuts back to your room for prompt bars, checklists and a countdown. Bold and premium.",
+   "preview": "styles/previews/editorial-ui.gif"
+  },
+  {
+   "id": "clean-talk",
+   "name": "Clean Talk",
+   "family": "overlay",
+   "needs_cutout": false,
+   "template": "templates/clean-talk",
+   "desc": "You, full frame and natural. One white word at a time at chest height, a small 3-line title, one or two big gold keywords and a couple of small cards. Calm and credible.",
+   "preview": "styles/previews/clean-talk.gif"
+  },
+  {
+   "id": "motion-editorial",
+   "name": "Motion editorial",
+   "family": "split",
+   "needs_cutout": false,
+   "template": "templates/motion-editorial",
+   "desc": "Animated graphics fill the top half (kinetic words, a circled number, a lab sheet, a gauge, a calendar) and you sit in a rounded card below. A magazine in motion.",
+   "preview": "styles/previews/motion-editorial.gif"
+  },
+  {
+   "id": "split-deck",
+   "name": "Split deck",
+   "family": "split",
+   "needs_cutout": false,
+   "default": true,
+   "template": "templates/split",
+   "desc": "Cards on the top half, you on the bottom half, short captions on the seam. A bold hook card, a name card, checklists that tick as you speak. Built for teaching.",
+   "preview": "styles/previews/split-deck.gif"
+  },
+  {
+   "id": "list-stack",
+   "name": "List stack",
+   "family": "overlay",
+   "needs_cutout": false,
+   "template": "templates/list-stack",
+   "desc": "A numbered list builds above your head as you say each item. The item you're on lights up and the numbers never move. Made for '5 things' reels.",
+   "preview": "styles/previews/list-stack.gif"
+  },
+  {
+   "id": "floating-cards",
+   "name": "Floating cards",
+   "family": "overlay",
+   "needs_cutout": true,
+   "template": "templates/floating-cards",
+   "desc": "Small frosted cards pop in around you on the exact word, plus one big word behind your head. Warm and bright, one word of caption at a time.",
+   "preview": "styles/previews/floating-cards.gif"
+  },
+  {
+   "id": "carousel-slideup",
+   "name": "Carousel slide-up",
+   "family": "carousel",
+   "needs_cutout": false,
+   "template": "templates/carousel-slideup",
+   "desc": "One cream card per point slides up over the lower half on each cut, like swiping a carousel. A static title on top, no captions. Short and punchy.",
+   "preview": "styles/previews/carousel-slideup.gif"
+  },
+  {
+   "id": "desk-demo",
+   "name": "Desk demo",
+   "family": "screen",
+   "needs_cutout": false,
+   "template": "templates/desk-demo",
+   "desc": "Cuts from you to a phone-filmed screen (a lab portal, an app, a calendar) where a cursor clicks and highlights what you're talking about. Real and hands-on.",
+   "preview": "styles/previews/desk-demo.gif"
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "id": "editorial-ui",
+ "name": "Editorial UI",
+ "family": "cutout",
+ "needs_cutout": true,
+ "flagship": true,
+ "template": "templates/editorial-ui",
+ "desc": "You, cut out onto a solid colour set on the hook and every punchline, with a huge serif headline behind your head. The set colour changes on each beat, cream UI cards (a prompt that types, a checklist, a magazine cover, a countdown) land on their words, and it cuts back to your real room in between. Premium and fast.",
+ "best_for": [
+  "listicles",
+  "authority and credentials",
+  "AI and tool tips",
+  "hooks that need a stop"
+ ],
+ "needs": "A cut-out of you (BiRefNet, a few extra minutes on the set frames). Works best with a locked-off camera and some headroom above your head.",
+ "preview": "styles/previews/editorial-ui.mp4",
+ "poster": "styles/previews/editorial-ui.jpg",
+ "inspired_by": "justyn.ai editorial reels (inspiration only, rebuilt from scratch in your brand colours)",
+ "demo": ""
+}
